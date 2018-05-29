@@ -39,6 +39,12 @@ which means that any changes pushed to
 another Git host server
 in a later lesson will include this information.
 
+> ## UoL email addresses
+>
+> Researchers with an @le.ac.uk email address can access certain benefits
+> unavailable with a non-academic address. I suggest you use your @le.ac.uk
+> address here, unless you are already a heavy GitHub/BitBucket user.
+
 > ## Line Endings
 >
 > As with other keys, when you hit the 'return' key on your keyboard, 
