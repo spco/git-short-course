@@ -36,10 +36,10 @@ Once there she can accept access to the Owner's repo.
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
  machine. This is called "cloning a repo". To clone the Owner's repo into
-her `Desktop` folder, the Collaborator enters:
+her `git-novice` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+$ git clone https://github.com/vlad/planets.git ~/git-novice/vlad-planets
 ~~~
 {: .bash}
 
@@ -51,7 +51,7 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ~~~
-$ cd ~/Desktop/vlad-planets
+$ cd ~/git-novice/vlad-planets
 $ nano pluto.txt
 $ cat pluto.txt
 ~~~
