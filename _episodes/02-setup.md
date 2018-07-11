@@ -43,7 +43,8 @@ in a later lesson will include this information.
 >
 > Researchers with an @le.ac.uk email address can access certain benefits
 > unavailable with a non-academic address. I suggest you use your @le.ac.uk
-> address here, unless you are already a heavy GitHub/BitBucket user.
+> address here, unless you are already a heavy GitHub/BitBucket user under 
+> a different email address.
 {: .callout}
 
 > ## Line Endings
