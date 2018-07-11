@@ -83,13 +83,13 @@ nothing to commit (create/copy files and use "git add" to track)
 > project with the following sequence of commands:
 >
 > ~~~
-> $ cd             # return to home directory
-> $ cd planets     # go into planets directory, which is already a Git repository
-> $ ls -a          # ensure the .git sub-directory is still present in the planets directory
-> $ mkdir moons    # make a sub-directory planets/moons
-> $ cd moons       # go into moons sub-directory
-> $ git init       # make the moons sub-directory a Git repository
-> $ ls -a          # ensure the .git sub-directory is present indicating we have created a new Git repository
+> $ cd ~/git-novice  # return to base directory
+> $ cd planets       # go into planets directory, which is already a Git repository
+> $ ls -a            # ensure the .git sub-directory is still present in the planets directory
+> $ mkdir moons      # make a sub-directory planets/moons
+> $ cd moons         # go into moons sub-directory
+> $ git init         # make the moons sub-directory a Git repository
+> $ ls -a            # ensure the .git sub-directory is present indicating we have created a new Git repository
 > ~~~
 > {: .bash}
 >
