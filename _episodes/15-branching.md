@@ -150,13 +150,15 @@ $ git log --oneline --branches --graph --decorate
 * 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
-git now is keeping track of a branch called `origin/new_branch`.
+git is now keeping track of a branch called `origin/new_branch`.
 
 Now switch to the main page of your repo on GitHub. You'll see a yellow banner 
 showing that GitHub has noticed you've added a branch. Click on the "Compare & pull request" button.
 
 ![Compare and Pull Request](../fig/github-add-pull-request.png)
 
+This page now shows you the changes in this branch. You can have multiple commits, and multiple 
+edits to multiple files. When you're happy with the changes, click "Create pull request".
 
 > ## A Basic Collaborative Workflow
 >
