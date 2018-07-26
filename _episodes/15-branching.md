@@ -44,8 +44,10 @@ $ git log --oneline --branches --graph --decorate
 * 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
+This shows us that `HEAD` is at `master` (denoted by the arrow), and `origin/master` is 
+at the same point in history.
 
-Now that we're happy that we're up to date, we're goin to make a new branch that is 
+Now that we're happy that we're up to date, we're going to make a new branch that is 
 _based_ on the latest commit on master.
 ~~~
 git branch new_branch
@@ -54,14 +56,14 @@ git branch new_branch
 Nothing looks to have changed, but if we again use `git log --oneline --branches --graph --decorate`
 we see that `new_branch` is now added. 
 ~~~
-* 83f3f03 (HEAD -> master, origin/master) Discuss concerns about Mars' climate for Mummy
+* 83f3f03 (HEAD -> master, origin/master, new_branch) Discuss concerns about Mars' climate for Mummy
 * 2e764a3 Add concerns about effects of Mars' moons on Wolfman
 * 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
-But be careful! If we run `git status` 
-we see `On branch master`. So we have created a new branch called `new_branch`, but are
-not on the branch yet.
+But be careful! If we run `git status` we see `On branch master`. So we have created a new branch 
+called `new_branch`, but are not on the branch yet. The `git log` command above also indicates this,
+because `HEAD` is still pointing to `master`, not to `new_branch`.
 
 We check out the new branch:
 
@@ -86,6 +88,8 @@ $ git log --oneline --branches --graph --decorate
 * 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
+
+We're now on the new branch, and so `HEAD -> new_branch`.
 
 Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
