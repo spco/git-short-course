@@ -19,7 +19,7 @@ the changes from that branch into the master.
 
 Firstly, ensure you are working on _your_ repository:
 ~~~
-$ cd ~/git/planets
+$ cd ~/git-novice/planets
 ~~~
 {: .bash}
 
