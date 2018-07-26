@@ -23,39 +23,67 @@ $ cd ~/git/planets
 ~~~
 {: .bash}
 
+Next, ensure that you have the very latest version from GitHub:
+~~~
+git checkout master
+git fetch origin master
+git pull origin master
+~~~
+{: .bash}
 
+To check that everything is up-to-date, we can use lots of options added to the basic 
+`git log` command to show us more detail:
 ~~~
-It is so a planet!
-~~~
-{: .output}
-
-~~~
-$ git add pluto.txt
-$ git commit -m "Add notes about Pluto"
+$ git log --oneline --branches --graph --decorate
 ~~~
 {: .bash}
 
 ~~~
- 1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+* 83f3f03 (HEAD -> master, origin/master) Discuss concerns about Mars' climate for Mummy
+* 2e764a3 Add concerns about effects of Mars' moons on Wolfman
+* 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
 
-Then push the change to the *Owner's repository* on GitHub:
+Now that we're happy that we're up to date, we're goin to make a new branch that is 
+_based_ on the latest commit on master.
+~~~
+git branch new_branch
+~~~
+{: .bash}
+Nothing looks to have changed, but if we again use `git log --oneline --branches --graph --decorate`
+we see that `new_branch` is now added. 
+~~~
+* 83f3f03 (HEAD -> master, origin/master) Discuss concerns about Mars' climate for Mummy
+* 2e764a3 Add concerns about effects of Mars' moons on Wolfman
+* 0f787d0 Start notes on Mars as a base.
+~~~
+{: .output}
+But be careful! If we run `git status` 
+we see `On branch master`. So we have created a new branch called `new_branch`, but are
+not on the branch yet.
+
+We check out the new branch:
 
 ~~~
-$ git push origin master
+$ git checkout new_branch
 ~~~
 {: .bash}
 
 ~~~
-Counting objects: 4, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 306 bytes, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
-   9272da5..29aba7c  master -> master
+Switched to branch 'new_branch'
+~~~
+{: .output}
+
+~~~
+$ git log --oneline --branches --graph --decorate
+~~~
+{: .bash}
+
+~~~
+* 83f3f03 (HEAD -> new_branch, origin/master, master) Discuss concerns about Mars' climate for Mummy
+* 2e764a3 Add concerns about effects of Mars' moons on Wolfman
+* 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
 
