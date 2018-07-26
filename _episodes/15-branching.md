@@ -155,6 +155,7 @@ git now is keeping track of a branch called `origin/new_branch`.
 Now switch to the main page of your repo on GitHub. You'll see a yellow banner 
 showing that GitHub has noticed you've added a branch. Click on the "Compare & pull request" button.
 
+![Compare and Pull Request](../fig/github-add-pull-request.png)
 
 
 > ## A Basic Collaborative Workflow
