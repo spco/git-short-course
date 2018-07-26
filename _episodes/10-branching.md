@@ -1,6 +1,6 @@
 ---
 title: Branching
-teaching: 25
+teaching: 15
 exercises: 0
 questions:
 - "How can I use branching to make my workflow more robust?"
