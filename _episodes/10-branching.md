@@ -58,6 +58,7 @@ $ git log --oneline --branches --graph --decorate
 This shows us that `HEAD` is at `master` (denoted by the arrow), and `origin/master` is 
 at the same point in history.
 
+
 Now that we're happy that we're up to date, we're going to make a new branch that is 
 _based_ on the latest commit on master. Branch names should be descriptive, so `new_branch` is not
 usually a good choice.
@@ -78,7 +79,6 @@ called `new_branch`, but are not on the branch yet. The `git log` command above 
 because `HEAD` is still pointing to `master`, not to `new_branch`.
 
 We check out the new branch:
-
 ~~~
 $ git checkout new_branch
 ~~~
@@ -103,7 +103,7 @@ $ git log --oneline --branches --graph --decorate
 
 We're now on the new branch, and so `HEAD -> new_branch`.
 
-Time to make some changes!
+Now it's time to make some changes!
 
 Make some changes to mars.txt, or perhaps add a new file. Then add and commit these changes. In
 this example, I've added notes on Jupiter to `jupiter.txt`:
@@ -170,7 +170,10 @@ showing that GitHub has noticed you've added a branch. Click on the "Compare & p
 ![Compare and Pull Request](../fig/github-add-pull-request.png)
 
 This page now shows you the changes in this branch. You can have multiple commits, and multiple 
-edits to multiple files. When you're happy with the changes, click "Create pull request".
+edits to multiple files. Note that allong the top you can see (and edit) which branches are to be 
+merged into which others (in our case, `new_branch` is to be merged into `master`).
+
+When you're happy with the changes, click "Create pull request".
 
 You're now on a Pull Request page:
 
