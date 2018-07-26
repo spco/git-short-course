@@ -160,26 +160,20 @@ showing that GitHub has noticed you've added a branch. Click on the "Compare & p
 This page now shows you the changes in this branch. You can have multiple commits, and multiple 
 edits to multiple files. When you're happy with the changes, click "Create pull request".
 
-> ## A Basic Collaborative Workflow
->
-> In practice, it is good to be sure that you have an updated version of the
-> repository you are collaborating on, so you should `git pull` before making
-> our changes. The basic collaborative workflow would be:
->
-> * update your local repo with `git pull origin master`,
-> * make your changes and stage them with `git add`,
-> * commit your changes with `git commit -m`, and
-> * upload the changes to GitHub with `git push origin master`
->
-> It is better to make many commits with smaller changes rather than
-> of one commit with massive changes: small commits are easier to
-> read and review.
-{: .callout}
+You're now on a Pull Request page:
+![Pull Request](../fig/github-pull-request.png)
 
-> ## Switch Roles and Repeat
+Take a few minutes to look around. You can add general comments, or you can inspect the individual commits, and add comments to lines in the commits. You can tag other users on GitHub with the `@` symbol, e.g. `@spco`.
+
+You can also add more commits from the command line, just by adding further commits to `new_branch`, and then `git push`-ing these. These commits will automatically appear on
+
+> ## Add more commits to an open Pull Request
 >
-> Switch roles and repeat the whole process.
+> Now that your Pull Request is open, you can add further commits to the branch, and then use `git push`
+> to add them to the Pull Request automatically. Try it now. Afterwards, refresh the Pull Request page
+> to see the new commit has appeared at the bottom of the timeline.
 {: .challenge}
+
 
 > ## Review Changes
 >
