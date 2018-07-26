@@ -59,7 +59,8 @@ This shows us that `HEAD` is at `master` (denoted by the arrow), and `origin/mas
 at the same point in history.
 
 Now that we're happy that we're up to date, we're going to make a new branch that is 
-_based_ on the latest commit on master.
+_based_ on the latest commit on master. Branch names should be descriptive, so `new_branch` is not
+usually a good choice.
 ~~~
 $ git branch new_branch
 ~~~
@@ -117,7 +118,7 @@ this example, I've added notes on Jupiter to `jupiter.txt`:
 
 Note that this latest commit is on `new_branch`, but it hasn't affected `master`.
 
-Let's use GitHub's Pull Request mechanism to merge these changes into `master`.
+Let's use GitHub's Pull Request mechanism to merge these changes from `new_branch` into `master`.
 
 ~~~
 $ git push
