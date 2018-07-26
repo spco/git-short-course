@@ -12,51 +12,17 @@ keypoints:
 - "`git push --set-upstream origin branch-name` sets `origin/branch-name` as the upstream branch of `branch-name`."
 ---
 
-For the next step, get into pairs.  One person will be the "Owner" and the other
-will be the "Collaborator". The goal is that the Collaborator add changes into
-the Owner's repository. We will switch roles at the end, so both persons will
-play Owner and Collaborator.
+For this next step, you will work on your own, but bear in mind that what is learnt
+can equally be applied to another user's repository  e.g. via GitHub. The goal is that
+you create a new branch for a new feature, and then use GitHub's interface to merge 
+the changes from that branch into the master.
 
-> ## Practicing By Yourself
->
-> If you're working through this lesson on your own, you can carry on by opening
-> a second terminal window.
-> This window will represent your partner, working on another computer. You
-> won't need to give anyone access on GitHub, because both 'partners' are you.
-{: .callout}
-
-The Owner needs to give the Collaborator access.
-On GitHub, click the settings button on the right,
-then select Collaborators, and enter your partner's username.
-
-![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
-
-To accept access to the Owner's repo, the Collaborator
-needs to go to [https://github.com/notifications](https://github.com/notifications).
-Once there she can accept access to the Owner's repo.
-
-Next, the Collaborator needs to download a copy of the Owner's repository to her
- machine. This is called "cloning a repo". To clone the Owner's repo into
-her `git-novice` folder, the Collaborator enters:
-
+Firstly, ensure you are working on _your_ repository:
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/git-novice/vlad-planets
+$ cd ~/git/planets
 ~~~
 {: .bash}
 
-Replace 'vlad' with the Owner's username.
-
-![After Creating Clone of Repository](../fig/github-collaboration.svg)
-
-The Collaborator can now make a change in her clone of the Owner's repository,
-exactly the same way as we've been doing before:
-
-~~~
-$ cd ~/git-novice/vlad-planets
-$ nano pluto.txt
-$ cat pluto.txt
-~~~
-{: .bash}
 
 ~~~
 It is so a planet!
