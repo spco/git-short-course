@@ -91,38 +91,36 @@ $ git log --oneline --branches --graph --decorate
 
 We're now on the new branch, and so `HEAD -> new_branch`.
 
-Note that we didn't have to create a remote called `origin`: Git uses this
-name by default when we clone a repository.  (This is why `origin` was a
-sensible choice earlier when we were setting up remotes by hand.)
+Time to make some changes!
 
-Take a look to the Owner's repository on its GitHub website now (maybe you need
-to refresh your browser.) You should be able to see the new commit made by the
-Collaborator.
-
-To download the Collaborator's changes from GitHub, the Owner now enters:
+Make some changes to mars.txt, or perhaps add a new file. Then add and commit these changes. In
+this example, I've added notes on Jupiter to `jupiter.txt`:
 
 ~~~
-$ git pull origin master
-~~~
-{: .bash}
-
-~~~
-remote: Counting objects: 4, done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 3 (delta 0)
-Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
- * branch            master     -> FETCH_HEAD
-Updating 9272da5..29aba7c
-Fast-forward
- pluto.txt | 1 +
- 1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+* ef25bc8 (HEAD -> new_branch) Added notes ruling out Jupiter as a destination.
+* 83f3f03 (origin/master, master) Discuss concerns about Mars' climate for Mummy
+* 2e764a3 Add concerns about effects of Mars' moons on Wolfman
+* 0f787d0 Start notes on Mars as a base.
 ~~~
 {: .output}
 
-Now the three repositories (Owner's local, Collaborator's local, and Owner's on
-GitHub) are back in sync.
+Note that this latest commit is on `new_branch`, but it hasn't affected `master`.
+
+Let's use GitHub's Pull Request mechanism to merge these changes into `master`.
+
+~~~
+git push
+~~~
+{: .bash}
+~~~
+fatal: The current branch new_branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new_branch
+~~~
+{: .output}
+
+
 
 > ## A Basic Collaborative Workflow
 >
