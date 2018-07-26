@@ -12,8 +12,8 @@ keypoints:
 - "`git push --set-upstream origin branch-name` sets `origin/branch-name` as the upstream branch of `branch-name`."
 ---
 
-For this next step, you will work on your own, but bear in mind that what is learnt
-can equally be applied to another user's repository  e.g. via GitHub. 
+For this next step, you will work on your own, but please bear in mind that what is learnt
+can equally be applied to another user's repository e.g. via GitHub. 
 
 The goal of this lesson is to create a new branch for a new feature, and then use GitHub's 
 interface to merge the changes from that branch into the master.
@@ -22,6 +22,11 @@ Conceptually, what we're going to do is this:
 
 ![Diagram of Branch and Merge](../fig/Branching.png)
 
+When it comes to the merge step, we will use GitHub to open a Pull Request. This says
+"I've made a branch, now please pull the branch into master (via a merge)". Using a 
+Pull Request allows us (and the owner/other users of the repository) to see the changes 
+that the branch contains. These can be reviewed and altered until satisfactory. Finally,
+the merge can be completed via the GitHub interface.
 
 Firstly, ensure you are working on _your_ repository:
 ~~~
