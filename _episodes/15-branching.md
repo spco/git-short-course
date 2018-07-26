@@ -161,11 +161,10 @@ This page now shows you the changes in this branch. You can have multiple commit
 edits to multiple files. When you're happy with the changes, click "Create pull request".
 
 You're now on a Pull Request page:
+
 ![Pull Request](../fig/github-pull-request.png)
 
-Take a few minutes to look around. You can add general comments, or you can inspect the individual commits, and add comments to lines in the commits. You can tag other users on GitHub with the `@` symbol, e.g. `@spco`.
-
-You can also add more commits from the command line, just by adding further commits to `new_branch`, and then `git push`-ing these. These commits will automatically appear on
+Take a few minutes to look around. You can add general comments, or you can inspect the individual commits, and add comments to lines in the commits. You can tag other users on GitHub with the `@` symbol, e.g. `@spco`. Explore the contents of the "Conversation / Commits / Checks/ Files Changed" tabs across the top.
 
 > ## Add more commits to an open Pull Request
 >
@@ -174,28 +173,19 @@ You can also add more commits from the command line, just by adding further comm
 > to see the new commit has appeared at the bottom of the timeline.
 {: .challenge}
 
-
 > ## Review Changes
 >
-> The Owner pushed commits to the repository without giving any information
-> to the Collaborator. How can the Collaborator find out what has changed with
-> command line? And on GitHub?
+> Note that the "Merge pull request" button has a drop-down menu to the right,
+> which allows you to select 3 different types of merge - "Create a merge commit", 
+> "Squash and merge" or "Rebase and merge". These all have slightly different behaviours
+> and are appropriate in different contexts, but for now "Create a merge commit" 
+> is fine. When you're happy that the contents of the Pull Request are as you want them, 
+> click the "Merge pull request" button, then "Confirm merge".
 >
-> > ## Solution
-> > On the command line, the Collaborator can use ```git fetch origin master```
-> > to get the remote changes into the local repository, but without merging
-> > them. Then by running ```git diff master origin/master``` the Collaborator
-> > will see the changes output in the terminal.
-> >
-> > On GitHub, the Collaborator can go to their own fork of the repository and
-> > look right above the light blue latest commit bar for a gray bar saying
-> > "This branch is 1 commit behind Our-Repository:master." On the far right of
-> > that gray bar is a Compare icon and link. On the Compare page the
-> > Collaborator should change the base fork to their own repository, then click
-> > the link in the paragraph above to "compare across forks", and finally
-> > change the head fork to the main repository. This will show all the commits
-> > that are different.
-> {: .solution}
+> Click on the "code" tab at the top of the page to go back to the main page, and check
+> that your changes from that branch have now been correctly merged into `master`.
+>
+> Congratulations! You've merged your first Pull Request!
 {: .challenge}
 
 > ## Comment Changes in GitHub
