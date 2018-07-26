@@ -25,9 +25,9 @@ $ cd ~/git/planets
 
 Next, ensure that you have the very latest version from GitHub:
 ~~~
-git checkout master
-git fetch origin master
-git pull origin master
+$ git checkout master
+$ git fetch origin master
+$ git pull origin master
 ~~~
 {: .bash}
 
@@ -50,7 +50,7 @@ at the same point in history.
 Now that we're happy that we're up to date, we're going to make a new branch that is 
 _based_ on the latest commit on master.
 ~~~
-git branch new_branch
+$ git branch new_branch
 ~~~
 {: .bash}
 Nothing looks to have changed, but if we again use `git log --oneline --branches --graph --decorate`
@@ -109,7 +109,7 @@ Note that this latest commit is on `new_branch`, but it hasn't affected `master`
 Let's use GitHub's Pull Request mechanism to merge these changes into `master`.
 
 ~~~
-git push
+$ git push
 ~~~
 {: .bash}
 ~~~
@@ -119,7 +119,24 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin new_branch
 ~~~
 {: .output}
-
+What's happened here? git doesn't know which branch to push our changes to in the
+GitHub repository (the "upstream branch"). But it suggests what it thinks is most 
+likely, and it's what we want in this case, so we go ahead and follow the advice:
+~~~
+$ git push --set-upstream origin new_branch
+~~~
+{: .bash}
+~~~
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:spco/planets.git
+ * [new branch]      new_branch -> new_branch
+Branch new_branch set up to track remote branch new_branch from origin.
+~~~
+{: .output}
 
 
 > ## A Basic Collaborative Workflow
