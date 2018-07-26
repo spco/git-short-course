@@ -173,7 +173,7 @@ Take a few minutes to look around. You can add general comments, or you can insp
 > to see the new commit has appeared at the bottom of the timeline.
 {: .challenge}
 
-> ## Review Changes
+> ## Review Changes and Merge
 >
 > Note that the "Merge pull request" button has a drop-down menu to the right,
 > which allows you to select 3 different types of merge - "Create a merge commit", 
@@ -188,20 +188,51 @@ Take a few minutes to look around. You can add general comments, or you can insp
 > Congratulations! You've merged your first Pull Request!
 {: .challenge}
 
-> ## Comment Changes in GitHub
->
-> The Collaborator has some questions about one line change made by the Owner and
-> has some suggestions to propose.
->
-> With GitHub, it is possible to comment the diff of a commit. Over the line of
-> code to comment, a blue comment icon appears to open a comment window.
->
-> The Collaborator posts its comments and suggestions using GitHub interface.
-{: .challenge}
+Finally, once we've mergeed our branch on GitHub, we need to clean up on our local repository.
 
-> ## Version History, Backup, and Version Control
->
-> Some backup software can keep a history of the versions of your files. They also
-> allows you to recover specific versions. How is this functionality different from version control?
-> What are some of the benefits of using version control, Git and GitHub?
-{: .challenge}
+~~~
+$ git checkout master
+~~~
+{: .bash}
+~~~
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+~~~
+{: .output}
+~~~
+$ git pull origin master
+~~~
+{: .bash}
+~~~
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From github.com:spco/planets
+ * branch            master     -> FETCH_HEAD
+   83f3f03..b97bc42  master     -> origin/master
+Updating 83f3f03..b97bc42
+Fast-forward
+ jupiter.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 jupiter.txt
+ ~~~
+ {: .output}
+ ~~~
+$ git log --oneline --branches --graph --decorate
+~~~
+{: .bash}
+~~~
+*   b97bc42 (HEAD -> master, origin/master) Merge pull request #1 from spco/new_branch
+|\  
+| * ef25bc8 (origin/new_branch, new_branch) Added notes ruling out Jupiter as a destination.
+|/  
+* 83f3f03 Discuss concerns about Mars' climate for Mummy
+* 2e764a3 Add concerns about effects of Mars' moons on Wolfman
+* 0f787d0 Start notes on Mars as a base.
+~~~
+{: .output}
+The last piece of tidying-up is to remove the old branch, if we're happy that it is no longer needed.
+~~~
+$ git branch -d new_branch
+~~~
+{: .bash}
