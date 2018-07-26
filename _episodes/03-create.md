@@ -16,6 +16,7 @@ we can start using it.
 Let's create a directory for our work and then move into that directory:
 
 ~~~
+$ cd ~/git-novice
 $ mkdir planets
 $ cd planets
 ~~~
