@@ -138,6 +138,24 @@ Branch new_branch set up to track remote branch new_branch from origin.
 ~~~
 {: .output}
 
+We can check what's changed:
+~~~
+$ git log --oneline --branches --graph --decorate
+~~~
+{: .bash}
+~~~
+* ef25bc8 (HEAD -> new_branch, origin/new_branch) Added notes ruling out Jupiter as a destination.
+* 83f3f03 (origin/master, master) Discuss concerns about Mars' climate for Mummy
+* 2e764a3 Add concerns about effects of Mars' moons on Wolfman
+* 0f787d0 Start notes on Mars as a base.
+~~~
+{: .output}
+git now is keeping track of a branch called `origin/new_branch`.
+
+Now switch to the main page of your repo on GitHub. You'll see a yellow banner 
+showing that GitHub has noticed you've added a branch. Click on the "Compare & pull request" button.
+
+
 
 > ## A Basic Collaborative Workflow
 >
