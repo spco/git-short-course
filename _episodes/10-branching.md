@@ -37,7 +37,6 @@ $ cd ~/git-novice/planets
 Next, ensure that you have the very latest version from GitHub:
 ~~~
 $ git checkout master
-$ git fetch origin master
 $ git pull origin master
 ~~~
 {: .bash}
